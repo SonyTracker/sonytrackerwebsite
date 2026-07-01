@@ -3,57 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error: 403</title>
+    <title>sonytracker.com</title>
     <style>
+        * { box-sizing: border-box; }
+
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding-top: 50px;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-        a {
-            color: #5865F2;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            background-color: #fff;
-            display: inline-block;
-            padding: 30px 50px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #000;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+            background-size: 32px 32px;
+            color: #fff;
+            margin: 0;
         }
 
-        /* NEW BUTTON STYLE */
-        .robux-btn{
-            display:inline-block;
-            margin-top:15px;
-            background:#000;
-            color:#fff;
-            padding:12px 20px;
-            border-radius:6px;
-            text-decoration:none;
-            font-weight:600;
+        .topbar {
+            background: #000;
+            color: #fff;
+            padding: 14px 20px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #444;
         }
-        .robux-btn:hover{
-            opacity:.85;
-            text-decoration:none;
+
+        .wrap {
+            max-width: 520px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: #000;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 30px;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 1.7rem;
+            color: #fff;
+        }
+
+        p {
+            line-height: 1.5;
+            color: #ccc;
+        }
+
+        .games {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 16px 0 24px;
+        }
+
+        .badge {
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: #fff;
+            border: 1px solid #fff;
+            background: #000;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            padding: 13px;
+            margin-top: 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            background: #000;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(255,255,255,0.15);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 6px rgba(255,255,255,0.15);
+        }
+
+        /* subtle animated sheen sweeping across on hover */
+        .btn::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -75%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
+            transform: skewX(-20deg);
+            transition: left 0.5s ease;
+        }
+
+        .btn:hover::after {
+            left: 125%;
+        }
+
+        .status {
+            margin-top: 20px;
+            font-size: 0.85rem;
+            color: #999;
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #999;
+            text-align: center;
+        }
+
+        footer a {
+            color: #999;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Hi there!</h1>
-        <p>This website is currently getting created, so if you're here for a gtag tracker press the link below!</p>
-        <p><a href="https://discord.gg/xTSBd4XHb2" target="_blank">https://discord.gg/playertracker</a></p>
 
-        <a class="robux-btn" href="https://sonytracker.com/robux-payment">
-            Robux Payment
-        </a>
+    <div class="topbar">sonytracker.com | The best and nicest player tracking discord server</div>
+
+    <div class="wrap">
+        <div class="card">
+            <h1>Player Tracker</h1>
+
+            <div class="games">
+                <span class="badge gorilla">Gorilla Tag</span>
+                <span class="badge roblox">Roblox</span>
+                <span class="badge minecraft">Minecraft</span>
+            </div>
+
+            <p>Track anybody you want across Minecraft, Roblox and Gorilla Tag!</p>
+
+            <p>Interested? Join the Discord.</p>
+
+            <a class="btn btn-discord" href="https://discord.gg/xTSBd4XHb2" target="_blank">Join the Discord</a>
+
+            <div class="status">Join the Discord for the tracker!</div>
+        </div>
+
+        <footer>
+            &copy; 2026 SonyTracker &middot; <a href="/terms">Terms</a>
+        </footer>
     </div>
+
 </body>
 </html>
