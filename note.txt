@@ -1,3 +1,8 @@
+UPDATE: 
+
+Web Server IP Banned our main server we are working on a fix.
+
+OLD UPDATES: 
 Web server is failing to publish updates so the server crashed, sorry for the "GET FAILED" error we are working on fixing the issue.
 
 Sorry if this was misunderstood. 
